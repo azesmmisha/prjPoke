@@ -1,0 +1,145 @@
+*{
+  box-sizing: border-box;
+}
+.wrapper{
+  padding: 15px;
+  font-size: 1.2rem;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+.poke-wrap{
+  padding: 15px;
+  border: 1px solid rgb(71, 69, 69);
+  border-radius: 10px;
+  min-width: 700px;
+  max-width: 760px;
+}
+.poke-title{
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.poke-data{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.poke-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 350px;
+  gap: 15px;
+}
+.poke-species{
+  padding: 10px;
+  background: #d8d8d8a4;
+  border-radius: 5px;
+}
+.poke-species-title{
+  font-weight: 500;
+  font-size: 20px;
+  display: inline;
+  margin: 0;
+}
+.poke-species-item{
+  margin: 5px 0 5px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.poke-imgs{
+  border: 1px solid rgb(179, 179, 179);
+  border-radius: 10px;
+  width: 300px;
+}
+.poke-img{
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.poke-btn{
+  margin: 10px 0 0 0;
+  font-size: 1.2rem;
+  padding: 20px 10px;
+}
+.poke-btn:hover{
+  background: #0b2094;
+}
+
+.abilities{
+  margin: 5px 0 5px 0px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background: #d8d8d8a4;
+  border-radius: 5px;
+}
+
+.abilities-title{
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+  display: inline;
+}
+
+.abilities-list{
+  text-align: right;
+}
+
+.mat-mdc-table .mdc-data-table__row {
+  height: 1.9rem;
+}
+
+.mdc-data-table__header-row {
+  height: 2.3rem;
+}
+
+.mdc-data-table__cell {
+  font-size: 17px;
+}
+
+.mdc-data-table__header-cell{
+  font-size: 20px;
+}
+
+p{
+  margin: 0;
+}
+
+.mat-column-stat {
+  word-wrap: break-word !important;
+  white-space: unset !important;
+  flex: 0 0 50% !important;
+  width: 50% !important;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  word-break: break-word;
+
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.mat-column-base, .mat-column-effort {
+  text-align: center;
+  word-wrap: break-word !important;
+  white-space: unset !important;
+  flex: 0 0 25% !important;
+  width: 25% !important;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  word-break: break-word;
+
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.mat-mdc-cell.mdc-data-table__cell.cdk-cell, .mat-mdc-header-cell.mdc-data-table__header-cell.cdk-header-cell{
+  padding: 0 8px !important;
+}

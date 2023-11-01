@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="side-bar">
+    <fa-icon [icon]="faUser" size="3x"></fa-icon>
+    <p class="user-email">{{ userData.email }}</p>
+    <span class="line"></span>
+    <a
+      [routerLinkActiveOptions]="{exact: true}"
+      routerLink="poke-list"
+      routerLinkActive="page-link_active" 
+      class="page-link"
+    >
+      <span class="page-link-text">Pokemons List</span>
+      <fa-icon [icon]="faList" size="xl"></fa-icon>
+    </a>
+    <a
+      routerLink="tracked-pokemons"
+      routerLinkActive="page-link_active"
+      class="page-link"
+    >
+      <span class="page-link-text">Tracked Pokemons</span>
+      <fa-icon [icon]="faListCheck" size="xl"></fa-icon>
+    </a>
+    <button class="btn-logout" (click)="logOut()">
+      <span class="btn-logout-span">Log Out</span>
+      <fa-icon style="margin-left: 20px;" [icon]="faArrowRightFromBracket"></fa-icon>
+    </button>
+  </div>
+  <div class="main-content">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+

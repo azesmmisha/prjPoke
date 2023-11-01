@@ -1,0 +1,23 @@
+.register-container{
+  width: 50%;
+  margin: 50px auto 0;
+  padding: 15px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.full-width{
+  width: 100%;
+}
+.register-title{
+  margin-left: 20px;
+}
+hr{
+  margin-bottom: 20px;
+}
+.custom-button {
+  font-size: 1.2rem; /* Increase the font size as desired */
+  padding: 20px 24px; /* Adjust padding to make the button larger */
+}
+.input-container{
+  margin-bottom: 15px;
+}

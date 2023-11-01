@@ -1,0 +1,50 @@
+<div class="register-container">
+  <h2 class="register-title">Register</h2>
+  <hr>
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <mat-form-field class="full-width input-container" appearance="outline">
+      <mat-label>Username</mat-label>
+      <input
+        type="text"
+        matInput
+        formControlName="username"
+      >
+    </mat-form-field>
+    <mat-form-field class="full-width input-container" appearance="outline">
+      <mat-label>Email</mat-label>
+      <input
+        type="email"
+        matInput
+        formControlName="email"
+      >
+      <mat-error *ngIf="registerForm.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+    <mat-form-field class="full-width input-container" appearance="outline">
+      <mat-label>Password</mat-label>
+      <input
+        [type]="hide ? 'password' : 'text'"
+        matInput
+        formControlName="password"
+      >
+      <mat-error *ngIf="registerForm.controls.password.invalid">{{getErrMessagePassword()}}</mat-error>
+      <button 
+        type="button" 
+        mat-icon-button matSuffix
+        (click)="hide = !hide"
+        [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide"
+      >
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+    <button
+      type="submit"
+      mat-flat-button
+      color="primary" 
+      class="custom-button"
+      [disabled]="!registerForm.valid"
+    >Register</button>
+    <a routerLink="../login" mat-flat-button style="cursor: pointer; margin-left: 10px;">Login</a>
+  </form>
+</div>
+
